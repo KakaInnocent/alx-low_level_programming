@@ -3,7 +3,7 @@
 /**
  * main - Prints numbers between 0 to 9 with commans and spaces.
  *
- * Retun: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
