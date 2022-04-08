@@ -3,12 +3,13 @@
 #include <time.h>
 
 /**
- * main - It determines if a number is positive, negative or zero
+ *main - It determines if a number is positive, negative or zero
  *
- * Return - Always returns o (meaning Success)
+ *Return - Always returns o (meaning Success)
  *
  */
-int main(void){
+int main(void)
+{
 	int n;
 
 	srand(time(0));
