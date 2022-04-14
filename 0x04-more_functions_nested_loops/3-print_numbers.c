@@ -2,7 +2,7 @@
 
 /**
  *print_numbers - prints numbers between 0 to 9
- *Return: no return, unfortunately :(
+ *Return: no return. unfortunately :(
  */
 void print_numbers(void)
 {
@@ -12,5 +12,5 @@ void print_numbers(void)
 	{
 		_putchar(ch);
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
