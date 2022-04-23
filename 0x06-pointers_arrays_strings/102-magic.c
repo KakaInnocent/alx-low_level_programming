@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  *main - output 98
  *Return: Always 0.
