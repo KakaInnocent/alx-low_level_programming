@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
  *_strcat - It concatenates two strings.
  *@dest: the destination string we append to.
