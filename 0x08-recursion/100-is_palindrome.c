@@ -1,12 +1,14 @@
 #include "main.h"
 
-/**
- *_strlen_recursion - returns the length of a string.
- *@s: string we are to use.
- *Return: the length of the string.
- */
 int check_pal(char *s, int i, int len);
-int _strlen_recusion(char *s);
+int _strlen_recursion(char *s);
+
+/**
+ *is_palindrome - checks if a string is a palindrome.
+ *@s: string we are to use.
+ *Return: 1 if it is, 0 if it is not a palindrome.
+ */
+
 
 int is_palindrome(char *s)
 {
@@ -17,11 +19,9 @@ int is_palindrome(char *s)
 }
 
 /**
- *check_pal - compares each character of the string.
- *@s: string to use.
- *@i: smallest iterator.
- *@len: length id the string.
- *Return: 1 if palindromw, 0 if not.
+ *_strlen_recursion - returns the length of a string
+ *@s: string to calculate length of
+ *Return: length of the string.
  */
 int _strlen_recursion(char *s)
 {
@@ -31,8 +31,10 @@ int _strlen_recursion(char *s)
 }
 
 /**
- *is_palindrome - detects if a string is a palindrome.
+ *check_pal - checks the characters recursively for palindrome.
  *@s: string
+ *@i: iterator
+ *@len: length of the string
  *Return: 1 if s is a palindrome, 0 if not.
  */
 int check_pal(char *s, int i, int len)
