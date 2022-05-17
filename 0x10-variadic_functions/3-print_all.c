@@ -9,41 +9,44 @@
 void print_all(const char * const format, ...)
 {
 	va_list verlist;
-	int j = 0;
-	char *str, *pes = "";
+	unsigned int i = 0, j, c = 0;
+	char *str;
+	const char args[] = "cifs";
 
 	va_start(verlist, format);
 
-	if (format)
+	while (format && format[i])
 	{
-		while (format[j])
+		j = 0;
+		while (args[j])
 		{
-			switch (format[j])
+			if (format[i] == args[j] && c)
 			{
-				case "c":
-					printf("%s%c", pes, va_arg(verlist, int));
-					break;
-				case "i":
-					printf("%s%d", pes, va_arg(verlist, int));
-					break;
-				case "f":
-					printf("%s%f", pes, va_arg(verlist, int));
-					break;
-				case "s":
-					str = va_arg(verlist, char *);
-					if (!str)
-						str = "(nil)";
-					printf("%s%s", pes, str);
-					break;
-				default:
-					j++;
-					continue;
-			}
-			pes = ", ";
-			j++;
+				printf(", ");
+				break;
+			} j++;
 		}
+		switch (format[i])
+		{
+			case "c":
+				printf("%s%c", pes, va_arg(verlist, int)), c = 1;
+				break;
+			case "i":
+				printf("%s%d", pes, va_arg(verlist, int)), c = 1;
+				break;
+			case "f":
+				printf("%s%f", pes, va_arg(verlist, double)), c = 1;
+				break;
+			case "s":
+				str = va_arg(verlist, char *), c = 1;
+				if (!str)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
+				break;
+		} i++;
 	}
-
-	printf("\n");
-	va_end(verlist);
+	printf("\n"), va_end(verlist);
 }
