@@ -11,14 +11,13 @@ void print_all(const char * const format, ...)
 	va_list verlist;
 	unsigned int i = 0, j, c = 0;
 	char *str;
-	const char args[] = "cifs";
+	const char m_args[] = "cifs";
 
 	va_start(verlist, format);
-
 	while (format && format[i])
 	{
 		j = 0;
-		while (args[j])
+		while (m_args[j])
 		{
 			if (format[i] == args[j] && c)
 			{
@@ -28,16 +27,16 @@ void print_all(const char * const format, ...)
 		}
 		switch (format[i])
 		{
-			case "c":
+			case 'c':
 				printf("%s%c", pes, va_arg(verlist, int)), c = 1;
 				break;
-			case "i":
+			case 'i':
 				printf("%s%d", pes, va_arg(verlist, int)), c = 1;
 				break;
-			case "f":
+			case 'f':
 				printf("%s%f", pes, va_arg(verlist, double)), c = 1;
 				break;
-			case "s":
+			case 's':
 				str = va_arg(verlist, char *), c = 1;
 				if (!str)
 				{
