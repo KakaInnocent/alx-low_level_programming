@@ -16,9 +16,9 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (format[j])
+		while (format[i])
 		{
-			switch (format[j])
+			switch (format[i])
 			{
 				case "c":
 					printf("%s%c", pes, va_arg(verlist, int));
@@ -30,10 +30,10 @@ void print_all(const char * const format, ...)
 					printf("%s%f", pes, va_arg(verlist, int));
 					break;
 				case "s":
-					str = va_arg(list, char *);
+					str = va_arg(verlist, char *);
 					if (!str)
 						str = "(nil)";
-					printf("%s%s", sep, str);
+					printf("%s%s", pes, str);
 					break;
 				default:
 					j++;
