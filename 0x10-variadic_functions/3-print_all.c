@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_list verlist;
 	unsigned int i = 0, j, c = 0;
 	char *str;
-	const m_args[] = "cifs";
+	const char m_args[] = "cifs";
 
 	va_start(verlist, format);
 	while (format && format[i])
