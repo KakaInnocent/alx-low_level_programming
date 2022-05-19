@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (m_args[j])
 		{
-			if (format[i] == args[j] && c)
+			if (format[i] == m_args[j] && c)
 			{
 				printf(", ");
 				break;
@@ -28,13 +28,13 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%s%c", pes, va_arg(verlist, int)), c = 1;
+				printf("%s%c", va_arg(verlist, int)), c = 1;
 				break;
 			case 'i':
-				printf("%s%d", pes, va_arg(verlist, int)), c = 1;
+				printf("%s%d", va_arg(verlist, int)), c = 1;
 				break;
 			case 'f':
-				printf("%s%f", pes, va_arg(verlist, double)), c = 1;
+				printf("%s%f", va_arg(verlist, double)), c = 1;
 				break;
 			case 's':
 				str = va_arg(verlist, char *), c = 1;
