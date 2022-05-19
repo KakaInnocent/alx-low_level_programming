@@ -28,13 +28,13 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%s%c", va_arg(verlist, int)), c = 1;
+				printf("%c", va_arg(verlist, int)), c = 1;
 				break;
 			case 'i':
-				printf("%s%d", va_arg(verlist, int)), c = 1;
+				printf("%d", va_arg(verlist, int)), c = 1;
 				break;
 			case 'f':
-				printf("%s%f", va_arg(verlist, double)), c = 1;
+				printf("%f", va_arg(verlist, double)), c = 1;
 				break;
 			case 's':
 				str = va_arg(verlist, char *), c = 1;
