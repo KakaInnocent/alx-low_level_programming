@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 		if (head == p2)
 		{
 			head = prev;
-			prev =p2;
+			prev = p2;
 			while (i)
 			{
 				p2 = prev;
