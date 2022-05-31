@@ -6,7 +6,7 @@
  *@n: pointer to number we are setting the bit
  *Return: 1 if successful, -1 if not
  */
-int set_bit(unsigned int *n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int k;
 
