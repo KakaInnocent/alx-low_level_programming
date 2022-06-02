@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *error_file - checks whether a file is accessible
+ *err_file - checks whether a file is accessible
  *@file_frm: source of the file
  *@file_t: destination of the file
  *@argv: arguments vector
  *Return: no return
  */
-void error_file(int file_frm, int file_t, char *argv[])
+void err_file(int file_frm, int file_t, char *argv[])
 {
 	if (file_frm == -1)
 	{
@@ -41,17 +41,17 @@ int main(int argc, char *argv[])
 
 	file_frm = open(argv[1], O_RDONLY);
 	file_t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_frm, file_t, argv);
+	err_file(file_frm, file_t, argv);
 
 	m = 1024;
 	while (m == 1024)
 	{
 		m = read(file_frm, buf, 1024);
 		if (m == -1)
-			error_file(-1, 0, argv);
+			err_file(-1, 0, argv);
 		k = write(file_t, buf, m);
 		if (k == -1)
-			error_file(0, -1, argv);
+			err_file(0, -1, argv);
 	}
 
 	err_exit = close(file_frm);
