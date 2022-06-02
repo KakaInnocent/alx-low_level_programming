@@ -57,14 +57,14 @@ int main(int argc, char *argv[])
 	err_exit = close(file_frm);
 	if (err_exit == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cannot close df %d\n", file_frm);
+		dprintf(STDERR_FILENO, "Error: Cannot close %d\n", file_frm);
 		exit(100);
 	}
 
 	err_exit = close(file_t);
 	if (err_exit == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cannot close df %d\n", file_frm);
+		dprintf(STDERR_FILENO, "Error: Cannot close %d\n", file_frm);
 		exit(100);
 	}
 	return (0);
