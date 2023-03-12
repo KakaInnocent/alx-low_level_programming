@@ -1,5 +1,5 @@
 # alx-low_level_programming
-This repository is about C programming langauge
+This repository is about low level programming featuring the C langauge
 </br>
 </br>
 | Topic | Description |
