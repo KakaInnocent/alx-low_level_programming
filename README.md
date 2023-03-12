@@ -20,4 +20,5 @@ This repository is about low level programming featuring the C langauge
 | [0x17-doubly_linked_lists](https://github.com/KakaInnocent/alx-low_level_programming/tree/main/0x17-doubly_linked_lists) | It aims to learn about doubly linked list in C language |
 |[0x18-dynamic_libraries](https://github.com/KakaInnocent/alx-low_level_programming/tree/main/0x18-dynamic_libraries)|It aims to learn about dynamic libraries in C languages |
 
-
+</br>
+C is only hard if you want it to be
