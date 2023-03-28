@@ -22,4 +22,4 @@ NBBKJL
 |[0x18-dynamic_libraries](https://github.com/KakaInnocent/alx-low_level_programming/tree/main/0x18-dynamic_libraries)|It aims to learn about dynamic libraries in C languages |
 
 </br>
-C is only hard if you want it to be
+Starting with C from beginner to advanced level
